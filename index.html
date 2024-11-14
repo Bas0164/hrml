@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HRML</title> <!-- Titel van de pagina -->
+    <link rel="icon" type="image/x-icon" href="img/icon.ico"><!-- Favicon instellen -->
+    <link rel="stylesheet" href="css/style.css"> <!-- CSS-stylesheet -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- Animate.css -->
+</head>
+
+<body>
+    <!-- Navigatiebalk -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-custom fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo.png" alt="Logo" height="50">
+            </a>
+            <!-- Hamburgermenu voor mobiele weergave -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link mr-5 active" aria-current="page" href="index.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mr-5" href="pages/overview.html">VACATURES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mr-5" href="pages/login.html">PROFIEL</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="logoutBtn">UITLOGGEN</a> <!-- Uitlogknop -->
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero sectie met knoppen voor vacatures -->
+    <div class="hero-section">
+        <div class="d-flex flex-column align-items-center">
+            <a href="pages/overview.html"
+                class="btn btn-primary btn-lg animate__animated animate__pulse animate__infinite">BEKIJK ALLE
+                VACATURES</a>
+            <a href="pages/randomvacancy.html"
+                class="btn btn-secondary mt-3 animate__animated animate__fadeInUp">WILLEKEURIGE VACATURE</a>
+        </div>
+    </div>
+    <!-- Sectie met kaarten voor navigatie -->
+    <div class="container text-center mt-5">
+        <div class="row">
+            <div class="col-sm mb-4">
+                <a href="index.html" class="card custom-card text-decoration-none">
+                    <img src="img/homeButtonImage.png" class="card-img-top img-fluid" alt="Photo 1">
+                    <div class="card-body">
+                        <span class="btn btn-primary btn-block homepageNavButton">HOME</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-sm mb-4">
+                <a href="pages/overview.html" class="card custom-card text-decoration-none">
+                    <img src="img/vacanciesButtonImage.png" class="card-img-top img-fluid" alt="Photo 2">
+                    <div class="card-body">
+                        <span class="btn btn-primary btn-block homepageNavButton">VACATURES</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-sm mb-4">
+                <a href="pages/login.html" class="card custom-card text-decoration-none">
+                    <img src="img/profileButtonImage.png" class="card-img-top img-fluid" alt="Photo 3">
+                    <div class="card-body">
+                        <span class="btn btn-primary btn-block homepageNavButton">PROFIEL</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="footer"></div>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

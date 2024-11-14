@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Vacature</title>
+    <link rel="icon" type="image/x-icon" href="../img/icon.ico">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- Animate.css -->
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-custom fixed-top animate__animated animate__fadeInDown">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../img/logo.png" alt="Logo" height="50"> <!-- Logo in de navigatiebalk -->
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span> <!-- Toggler icon voor mobiele weergave -->
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link mr-5" aria-current="page" href="../index.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active mr-5" href="overview.html">VACATURES</a>
+                        <!-- Actieve link naar vacatures -->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mr-5" href="login.html">PROFIEL</a> <!-- Link naar profiel -->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="logoutBtn">UITLOGGEN</a> <!-- Uitlogknop -->
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-10 text-center">
+                <h1 class="display-5 mt-5 animate__animated animate__fadeInDown" id="vacancyTitle">Sfeermaker
+                    (Roosendaal)</h1> <!-- Titel van de vacaturepagina -->
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card mb-5">
+                    <video autoplay muted loop>
+                        <source src="../img/randomVacancyVideo.mp4" type="video/mp4"> <!-- Video over de vacature -->
+                        Your browser does not support the video tag. <!-- Fallback tekst voor oudere browsers -->
+                    </video>
+                    <div class="vacancydetail-card-body">
+                        <p class="card-text" id="vacancyText">Roosendaal bestaat al sinds 1268, en hoewel we flink wat
+                            historie hebben, lukt het ons niet om die warme, bruisende sfeer te creëren waar onze
+                            buren in Bergen op Zoom om bekend staan. Daarom zijn we op zoek naar een échte sfeermaker
+                            die onze stad kan omtoveren tot een plek waar iedereen zich welkom en verbonden voelt.
+                        </p> <!-- Beschrijving van de vacature -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="upload-section mt-5 mb-5 animate__animated animate__fadeInUp">
+                    <h3>Upload een bestand</h3> <!-- Titel voor de uploadsectie -->
+                    <form id="cvUploadForm">
+                        <label for="file">Upload je CV (PDF):</label> <!-- Label voor het uploaden van een CV -->
+                        <input type="file" id="file" name="file" accept="application/pdf">
+                        <!-- Bestandsinvoer voor PDF's -->
+                        <button type="submit" class="btn btn-primary mt-3">Upload CV</button>
+                        <!-- Verzendknop voor het uploaden -->
+                    </form>
+                    <button id="audioButton" class="btn btn-secondary mt-3">Een voorbeeld van sfeer</i></button>
+                    <audio id="audio" src="../img/vastenavend.mp3"></audio>
+                    <div id="uploadResult" class="mt-3" style="font-size: 20px;"></div> <!-- Resultaat van de upload -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer"></div> <!-- Footer sectie die later wordt geladen -->
+    <script src="../js/randomvacancy.js"></script>
+</body>
+
+</html>

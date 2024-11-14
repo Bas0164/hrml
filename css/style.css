@@ -1,0 +1,461 @@
+/* ------------------Algemeen------------------ */
+
+/* Definieer een aangepaste lettertype */
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('../fonts/SFPRODISPLAYREGULAR.OTF') format('truetype');
+}
+
+/* Reset marges en padding voor alle elementen en stel het standaard lettertype in */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'SF Pro Display', sans-serif;
+}
+
+/* Stel de hoogte van html en body in op 100% en verwijder marges */
+html, body {
+    height: 100%;
+    margin: 0;
+    min-height: 100vh;
+}
+
+/* Stel de body in als flex container met kolomrichting */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+/* ------------------Navbar------------------ */
+
+/* Stijl voor aangepaste achtergrond van de navigatiebalk */
+.bg-custom {
+    background: linear-gradient(45deg, #4651c9, #2e3a8c) !important; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    border-bottom: 4px solid #F8A154;
+    border-left: 4px solid #F8A154; 
+    border-right: 4px solid #F8A154; 
+    border-bottom-left-radius: 25px; 
+    border-bottom-right-radius: 25px; 
+}
+
+/* Stijl voor actieve navigatie-items */
+.active {
+    background-color: #2e3a8c !important; 
+    border-radius: 5px; 
+    border: #F8A154 2px solid;
+}
+
+/* Stijl voor navigatielinks */
+.navbar-nav .nav-link {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #f2f2f3 !important; 
+    transition: color 0.5s ease, background-color 0.5s ease, transform 0.3s ease; /* Vloeiende overgang */
+}
+
+/* Stijl voor hover-effect op navigatielinks */
+.navbar-nav .nav-link:hover {
+    color: #F8A154 !important; 
+    background-color: #2e3a8c !important;
+    border-radius: 5px; 
+    transform: scale(1.3); 
+}
+
+
+
+/* ------------------Hero Section------------------ */
+
+/* Stijl voor de hero-sectie */
+.hero-section {
+    background-image: url('../img/background.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    min-height: 100vh;
+}
+
+/* Stijl voor knoppen in de hero-sectie */
+.hero-section .btn {
+    background: linear-gradient(45deg, #4651c9, #2e3a8c);
+    border: none;
+    padding: 15px 30px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    transition: background-color 0.5s ease, transform 0.3s ease;
+}
+
+/* Stijl voor secundaire knoppen in de hero-sectie */
+.hero-section .btn-secondary {
+    font-size: 1.2rem;
+}
+
+
+
+/* ------------------Container------------------ */
+
+/* Stijl voor knoppen in de card-body */
+.card-body .btn {
+    width: 100%; 
+    border-radius: 0;
+}
+
+/* Stijl voor aangepaste kaarten */
+.custom-card {
+    width: 70%;
+    margin: 0 auto; 
+    border-radius: 0;
+    border: none !important;
+    transition: transform 0.3s ease;
+}
+
+/* Hover-effect voor aangepaste kaarten */
+.custom-card:hover {
+    transform: scale(1.3);
+}
+
+/* Stijl voor knoppen op de homepage */
+.homepageNavButton {
+    background: linear-gradient(45deg, #4651c9, #2e3a8c);
+    border-radius: 5px !important;
+    font-size: 1.2rem !important;
+    font-weight: bold !important;
+}
+
+
+
+/* ------------------Dashboard------------------ */
+
+/* Stijl voor kaarten in het dashboard */
+.dashboard .card {
+    margin-bottom: 20px;
+}
+
+/* Stijl voor kaarttitels in het dashboard */
+.dashboard .card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #2e3a8c;
+}
+
+/* Stijl voor de inhoud van kaarten in het dashboard */
+.dashboard .card-body {
+    padding: 20px;
+}
+
+/* Stijl voor tabellen in het dashboard */
+.dashboard .table {
+    margin-top: 20px;
+}
+
+/* Stijl voor tabelkoppen en cellen in het dashboard */
+.dashboard .table th, .dashboard .table td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* Stijl voor lijstitems in het dashboard */
+.dashboard .list-group-item {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover-effect voor lijstitems in het dashboard */
+.dashboard .list-group-item:hover {
+    background-color: #f8f9fa;
+    transform: scale(1.02);
+}
+
+/* Stijl voor primaire knoppen in het dashboard */
+.dashboard .btn-primary {
+    background: linear-gradient(45deg, #4651c9, #2e3a8c);
+    border-radius: 5px !important;
+    font-size: 1.2rem !important;
+    font-weight: bold !important;
+}
+
+/* Hover-effect voor primaire knoppen in het dashboard */
+.dashboard .btn-primary:hover {
+    background-color: #2e3a8c;
+    transform: scale(1.05);
+}
+
+/* Focus-effect voor primaire knoppen in het dashboard */
+.dashboard .btn-primary:focus {
+    box-shadow: 0 0 0 0.2rem rgba(46, 58, 140, 0.5);
+}
+
+
+
+/* ------------------Footer------------------ */
+
+/* Stijl voor de aangepaste achtergrond van de footer */
+footer.footer-bg-custom {
+    background: linear-gradient(45deg, #4651c9, #2e3a8c) !important; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-top: 4px solid #F8A154;
+    border-left: 4px solid #F8A154;
+    border-right: 4px solid #F8A154;
+    border-bottom: none;
+}
+
+/* Stijl voor links in de footer */
+footer a {
+    color: #f2f2f3;
+}
+
+/* Hover-effect voor links in de footer */
+footer a:hover {
+    color: #F8A154;
+}
+
+
+
+/* ------------------Profile------------------ */
+
+/* Stijl voor profielkaarten */
+.profile-card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    border-radius: 25px;
+    border: #F8A154 4px solid;
+}
+
+/* Stijl voor profielknoppen */
+.profile-btn {
+    background: linear-gradient(45deg, #4651c9, #2e3a8c);
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+/* Hover-effect voor profielknoppen */
+.profile-btn:hover {
+    color: #F8A154 !important; 
+    background-color: #2e3a8c !important;
+    border-radius: 5px;
+    transform: scale(1.05);
+    text-decoration: none; 
+}
+
+/* Stijl voor registratieknoppen */
+.register-btn {
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+/* Hover-effect voor registratieknoppen */
+.register-btn:hover {
+    text-decoration: none;
+}
+
+
+
+/* ------------------Overview------------------ */
+
+/* Stijl voor overzichtskaarten */
+.overview-card {
+    background-color: #f2f2f3;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    border-radius: 25px;
+    border: #F8A154 4px solid;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Hover-effect voor overzichtskaarten */
+.overview-card:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.50);
+}
+
+/* Stijl voor titels van overzichtskaarten */
+.overview-card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    width: 70%;
+}
+
+/* Stijl voor overzichtsknoppen */
+.overview-btn {
+    background: linear-gradient(45deg, #4651c9, #2e3a8c);
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    padding: 10px 20px;
+    transition: transform 0.3s ease;
+}
+
+/* Stijl voor links in overzichtsknoppen */
+.overview-btn a {
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    text-decoration: none; 
+}
+
+/* Hover-effect voor overzichtsknoppen */
+.overview-btn:hover {
+    color: #F8A154 !important; 
+    background-color: #2e3a8c !important;
+    border-radius: 5px;
+    transform: scale(1.1);
+    text-decoration: none; 
+}
+
+
+
+/* ------------------Vacancy Detail------------------ */
+
+/* Stijl voor afbeeldingen bovenaan kaarten */
+.card-img-top {
+    height: 300px;
+    object-fit: cover;
+}
+
+/* Stijl voor tekst in kaarten */
+.card-text {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+/* Stijl voor de inhoud van vacature detailkaarten */
+.vacancydetail-card-body {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Stijl voor uploadsecties */
+.upload-section {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Stijl voor koppen in uploadsecties */
+.upload-section h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* Stijl voor labels in uploadsecties */
+.upload-section label {
+    font-weight: bold;
+}
+
+/* Stijl voor bestandsinvoer in uploadsecties */
+.upload-section input[type="file"] {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Stijl voor knoppen in uploadsecties */
+.upload-section button {
+    background: linear-gradient(45deg, #4651c9, #2e3a8c);
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    padding: 10px 20px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover-effect voor knoppen in uploadsecties */
+.upload-section button:hover {
+    background-color: #005bb5;
+    transform: scale(1.05);
+}
+
+/* Stijl voor vacaturefoto's */
+.vacancyPhoto {
+    object-fit: contain;
+}
+
+
+
+/* ------------------Feedback Section------------------ */
+
+/* Stijl voor feedbacksecties */
+.feedback-section {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Stijl voor koppen in feedbacksecties */
+.feedback-section h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* Stijl voor labels in feedbacksecties */
+.feedback-section label {
+    font-weight: bold;
+}
+
+/* Stijl voor tekstgebieden in feedbacksecties */
+.feedback-section textarea {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Stijl voor knoppen in feedbacksecties */
+.feedback-section button {
+    background: linear-gradient(45deg, #4651c9, #2e3a8c);
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    padding: 10px 20px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover-effect voor knoppen in feedbacksecties */
+.feedback-section button:hover {
+    background-color: #005bb5;
+    transform: scale(1.05);
+}
+
+
+
+/* ------------------Recruiter dashboard Vacancies------------------ */
+
+/* Stijl voor vacaturekaarten */
+.vacancy-card {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Stijl voor containers */
+.container {
+    flex: 1; 
+}

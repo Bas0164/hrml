@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recruiter Dashboard</title> <!-- Titel van de pagina -->
+    <link rel="icon" type="image/x-icon" href="../img/icon.ico"><!-- Favicon instellen -->
+    <link rel="stylesheet" href="../css/style.css"> <!-- CSS-stylesheet -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- Animate.css -->
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-custom fixed-top animate__animated animate__fadeInDown">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../img/logo.png" alt="Logo" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <!-- Navigatie links -->
+                    <li class="nav-item">
+                        <a class="nav-link mr-5" aria-current="page" href="../index.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mr-5" href="overview.html">VACATURES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mr-5 active" href="login.html">PROFIEL</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="logoutBtn">UITLOGGEN</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="dashboard">
+        <div class="container mt-5 pt-5">
+            <div class="row">
+                <!-- Welkomstsectie met gebruikersinformatie -->
+                <div class="col-md-4">
+                    <div class="card shadow-lg mb-4 bg-light">
+                        <div class="card-body text-left" id="userInfoCard">
+                            <h5 class="card-title">Welkom,
+                                <span id="username">[Recruiter Naam]</span>
+                            </h5>
+                            <p class="card-text">Profielinformatie:</p>
+                            <ul class="list-unstyled" id="userDetails">
+                                <li><strong>Email:</strong> <span id="email">[recruiter@example.com]</span></li>
+                                <li><strong>Locatie:</strong> <span id="adress">[adress]</span></li>
+                                <li><strong>Geslacht:</strong> <span id="gender">[Geslacht]</span></li>
+                                <a href="editprofile.html" class="mt-3 btn btn-primary">Bewerk Profiel</a>
+                                <a href="addvacancy.html" class="mt-3 btn btn-primary">Voeg vacature toe</a>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card shadow-lg bg-light">
+                        <div class="card-body">
+                            <h5 class="card-title">Recente Aanmeldingen</h5>
+                            <ul class="list-group list-group-flush" id="recent-applications">
+                                <!-- Recente aanmeldingen worden hier dynamisch geladen -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vacatureoverzicht sectie -->
+                <div class="col-md-8">
+                    <div class="card shadow-lg bg-light">
+                        <div class="card-body">
+                            <h5 class="card-title">Vacatureoverzicht</h5>
+                            <div id="vacancies-container" class=""></div>
+                            <!-- Vacatures worden hier dynamisch geladen -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+    <div id="footer"></div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/dashboard-recruiter.js"></script>
+</body>
+
+</html>

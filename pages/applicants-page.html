@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HRML Sollicitanten</title>
+    <link rel="icon" type="image/x-icon" href="../img/icon.ico">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- Animate.css -->
+</head>
+
+<body>
+    <!-- Navigatiebalk bovenaan de pagina -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-custom fixed-top animate__animated animate__fadeInDown">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../img/logo.png" alt="Logo" height="50">
+            </a>
+            <!-- Toggleknop voor kleinere schermen -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <!-- Navigatielinks naar andere pagina's -->
+                    <li class="nav-item"><a class="nav-link mr-5" href="../index.html">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link mr-5 active" href="overview.html">VACATURES</a></li>
+                    <li class="nav-item"><a class="nav-link mr-5" href="login.html">PROFIEL</a></li>
+                    <li class="nav-item"><a class="nav-link" id="logoutBtn">UITLOGGEN</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hoofdinhoud van de pagina -->
+    <div class="container mt-5 pt-5">
+        <div class="container mt-5">
+            <h1 id="vacancyTitle">Sollicitanten voor Vacature</h1>
+            <table class="table table-striped mt-4">
+                <thead>
+                    <!-- Tabelkoppen voor de sollicitantenlijst -->
+                    <tr>
+                        <th>Gebruikersnaam</th>
+                        <th>Status</th>
+                        <th>Feedback</th>
+                        <th>Matchpercentage</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody id="candidatesTable">
+                    <!-- Sollicitanten worden hier weergegeven -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div id="footer"></div>
+    <script src="../js/applicants-page.js"></script>
+</body>
+
+</html>
